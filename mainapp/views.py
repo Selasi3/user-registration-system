@@ -4,8 +4,15 @@ from .models import Person
 
 def index(request):
     totalnumber = Person.objects.all().count();
+    totalmales = Person.objects.all().filter(gender="M").count()
+    totalfemales = Person.objects.all().filter(gender="F").count()
+
     context = {
-        "totalnumber":totalnumber
+        "totalnumber":totalnumber,
+        "totalmales": totalmales,
+        "totalfemales": totalfemales
+
+
     }
     return render(request, 'index.html',context=context)
 
