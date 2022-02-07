@@ -2,9 +2,36 @@
 {% block content %}
 <nav class="navbar navbar-dark bg-primary">
     <a class = "navbar-brand" href="{% url 'index' %}">Registration System</a>
+   
 
-
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 </nav>
+ <nav aria-label="breadcrumb">
+    <ol class="breadcrumb center-align">
+      <li class="breadcrumb-item active" aria-current="page">Home</li>
+    </ol>
+  </nav>
+<div class="jumbotron">
+    <h1 class="display-4 text-center">Overview</h1>
+    <p class="lead text-center">Summary of Registration Details</p>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-6 col-xs-6 col-lg-6">
+<h1 class="text-left">Registration Summary</h1>
+            </div>
+            <div class="col-6 col-md-6 col-xs-6 col-lg-6">
+                <h1 class="font-weight-bold text-center">Registration Summary</h1>
+
+            </div>
+        </div>
+    </div>
+</section>
+  
 {{totalnumber}}  
 {% endblock content %}
 }
