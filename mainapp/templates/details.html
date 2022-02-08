@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Other Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Telephone Number</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    {% for person in total_person %}
+    <tbody>
+      <tr>
+        <th scope="row">{{person.count}}</th>
+        <td>{{ person.first_name }}</td>
+        <td>{{ person.last_name }}</td>
+        <td>{{ person.other_name }}</td>
+        <td>{{ person.gender }}</td>
+        <td>{{ person.number }}</td>
+        <td>{{ person.email }}</td>
+
+
+     
+      </tr>
+      
+{% endfor %}  
+{% endblock %}
+

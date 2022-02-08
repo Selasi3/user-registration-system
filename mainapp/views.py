@@ -8,7 +8,7 @@ from .models import Person
 # Create your views here.
 
 def index(request):
-    totalnumber = Person.objects.all().count();
+    totalnumber = Person.objects.all().count()
     totalmales = Person.objects.all().filter(gender="M").count()
     totalfemales = Person.objects.all().filter(gender="F").count()
 
@@ -28,4 +28,10 @@ def addPerson(request):
     else:
         form = PersonForm()
     return render(request, 'add.html', {'form':form})
-    
+
+def details(request):
+    total_person = Person.objects.all()
+    context ={
+        "total_person": total_person
+    }
+    return render(request,'details.html',context=context)
