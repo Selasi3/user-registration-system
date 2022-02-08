@@ -14,6 +14,9 @@ class Person(models.Model):
     Gender =(("M","Male" ),("F","Female"))
     gender = models.CharField(max_length=1, choices=Gender, blank=False)
 
+    class Meta:
+        unique_together = ['first_name', 'last_name','number', 'gender']
+
 
     def __str__(self):
         return f"{self.first_name} , {self.last_name}"
