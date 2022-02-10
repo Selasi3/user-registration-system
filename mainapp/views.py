@@ -1,4 +1,6 @@
 
+from itertools import count
+from multiprocessing import context
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.urls import reverse
@@ -30,8 +32,29 @@ def addPerson(request):
     return render(request, 'add.html', {'form':form})
 
 def details(request):
-    total_person = Person.objects.all()
-    context ={
-        "total_person": total_person
+    
+    total_person = [person for person in Person.objects.all()]
+    
+    context = {
+        "total_person": total_person,            
     }
+    
     return render(request,'details.html',context=context)
+
+def femaleList(request):
+    females = Person.objects.all().filter(gender="F")
+
+    context = {
+        "females" : females
+    }
+
+    return render(request, 'femalelist.html', context=context)
+
+def maleList(request):
+    males = Person.objects.all().filter(gender="M")
+
+    context = {
+        "males" : males
+    }
+
+    return render(request, 'malelist.html', context=context)

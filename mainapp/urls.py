@@ -21,6 +21,8 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('add/', views.addPerson, name='add'),
-    path('details', views.details, name='details')
+    path('details/', views.details, name='details'),
+    path('femalelist/', views.femaleList, name='femalelist'),
+    path('malelist/', views.maleList, name='malelist')
  
 ]
