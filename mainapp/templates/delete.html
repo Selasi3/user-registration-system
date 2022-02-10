@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+<section>
+
+
+<div class="container">
+       <div>
+        <form method="post" class="post-form">
+            {% csrf_token %}
+            <h2>Are you sure you want to delete?</h2>
+            
+            <button type="submit" class="btn btn-danger">YES</button>  
+            <button type="submit" class="btn btn-primary">NO</button>  
+          </form>
+    </div>
+    
+</div>
+</section>
+
+{% endblock content %}
