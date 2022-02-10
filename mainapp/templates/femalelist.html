@@ -3,7 +3,10 @@
 
 {% block content %}
 
-
+<div class="jumbotron">
+    <h1 class="display-4">Female list</h1>
+   
+  </div>
 <table class="table">
     <thead class="thead-dark">
       <tr>
@@ -11,28 +14,25 @@
         <th scope="col">First Name</th>
         <th scope="col">Last Name</th>
         <th scope="col">Other Name</th>
-        <th scope="col">Gender</th>
         <th scope="col">Telephone Number</th>
         <th scope="col">Email</th>
       </tr>
     </thead>
-    {% for person in total_person %} 
-    
+    {% for female in females %}
     <tbody>
-      <tr>        
+      <tr>
+      
         <th scope="row">{{forloop.counter}}</th> 
-        <td>{{ person.first_name}}</td>
-         <td>{{ person.last_name }}</td>
-        <td>{{ person.other_name }}</td>
-        <td>{{ person.gender }}</td>
-        <td>{{ person.number }}</td>
-        <td>{{ person.email }}</td> 
+        <td>{{ female.first_name }}</td>
+        <td>{{ female.last_name }}</td>
+        <td>{{ female.other_name }}</td>
+        <td>{{ female.number }}</td>
+        <td>{{ female.email }}</td>
 
 
      
       </tr>
-            
-  
+      
 {% endfor %}  
 {% endblock %}
 
