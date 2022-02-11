@@ -6,13 +6,13 @@
 
 
 <div class="container">
-       <div>
+       <div class="row text-center">
         <form method="post" class="post-form">
             {% csrf_token %}
             <h2>Are you sure you want to delete?</h2>
             
             <button type="submit" class="btn btn-danger">YES</button>
-            <a href="/"><div class="btn btn-primary">Cancel</div>
+            <a href="/"><div class="btn btn-primary">No</div>
          
            
           </form>
