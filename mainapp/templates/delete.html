@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 
+
 {% block content %}
 <section>
 
 
-<div class="container">
-       <div class="row text-center">
+<div class="container h-100">
+       <div class="row align-items-center postion-form">
         <form method="post" class="post-form">
             {% csrf_token %}
             <h2>Are you sure you want to delete?</h2>
